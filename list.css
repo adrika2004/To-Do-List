@@ -1,0 +1,115 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-app{
+  width:100%;
+  max-width:540px;
+  background-color:white;
+  padding: 40px 30px 70px;
+  margin: 100px auto 20px;
+  border-radius: 10px;
+}
+.todo-app h2{
+  color: rgb(176, 63, 176);
+  display: flex;
+  align-items: center;
+  margin-bottom:20px;
+  margin-right: 10px;
+  font-size: 2rem;
+
+}
+.todo-app h2 img{
+  height: 30px;
+  width: 30px;
+  margin-left: 10px;
+}
+.row{
+  display:flex ;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(168, 248, 179);
+  width:100% ;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+input{
+  flex:1;
+  height:50px;
+  border: none;
+  outline:none ;
+  background:transparent ;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+button{
+  width:110px;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  background-color: rgb(43, 97, 40);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #2fb979;
+}
+ul li{
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.1rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+ul li::before{
+  content:'';
+  position: absolute;
+  height:28px ;
+  width: 28px;
+  border-radius: 50%;
+  background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Circle_-_black_simple.svg/1200px-Circle_-_black_simple.svg.png);
+  background-size:cover;
+  background-position:center;
+  top:12px;
+  left:8px;
+}
+ul li.checked{
+  color: #08482a;
+  text-decoration: line-through;
+}
+ul li.checked::before{
+  color: #08482a;
+  background-image:url(https://cdn-icons-png.flaticon.com/256/11450/11450152.png) ;
+}
+ul li span{
+   position: absolute;
+   right: 0;
+   top:5px;
+   width:40px;
+   height: 40px;
+   font-size: 22px;
+   color:black;
+   line-height: 40px;
+   text-align: center;
+  border-radius: 50%;
+}
+ul li span:hover{
+  background-color: rgb(211, 211, 211);
+}
